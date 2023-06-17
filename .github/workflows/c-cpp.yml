@@ -30,4 +30,4 @@ jobs:
         artifacts: "libdockwidget_plugin.so*"
         token: ${{ secrets.GITHUB_TOKEN }}
         tag: API.26
-        commit: API.26
+        commit: ${{ github.sha }}
