@@ -21,4 +21,8 @@ jobs:
       env:
         QT_VERSION: 5
       run: make
-    
+    - name: Upload Release
+      uses: ncipollo/release-action@v1.12.0
+      with:
+        artifacts: "libdockwidget_plugin.so._VERSION_.0.0"
+        token: ${{ secrets.GITHUB_TOKEN }}
