@@ -29,5 +29,5 @@ jobs:
         allowUpdates: true
         artifacts: "libdockwidget_plugin.so*"
         token: ${{ secrets.GITHUB_TOKEN }}
-        tag: API._VERSION_
-        commit: API._VERSION_
+        tag: API.26
+        commit: API.26
