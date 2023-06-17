@@ -6,6 +6,7 @@ set(CMAKE_VS_PLATFORM_TOOLSET "v140")
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
+set(PLUGIN_VER "26")
 
 project("dockwidget")
 
