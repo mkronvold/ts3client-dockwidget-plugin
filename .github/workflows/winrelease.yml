@@ -47,7 +47,6 @@ jobs:
           cache: ${{ steps.cache-qt.outputs.cache-hit }}
           setup-python: 'false'
           tools: 'tools_ifw tools_qtcreator,qt.tools.qtcreator'
-          REMaqtversion: '==2.1.0'
       - name: Setup cmake
         uses: jwlawson/actions-setup-cmake@v1.14
       - name: Build
