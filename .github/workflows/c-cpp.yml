@@ -3,25 +3,22 @@ name: C/C++ CI
 on:
   push:
     branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
-    env:
-    - QT_VERSION=5
-  
     steps:
     - uses: actions/checkout@v3
-    - run: apt-get update -qq
-    - run: apt-get install qtdeclarative5-dev qt5-default
-    - name: configure
-      run: ./configure
+    - name: update apt
+      run: apt-get update -qq
+    - name: Install qt
+      run: apt-get -y install qtdeclarative5-dev qt5-default
     - name: qmake
+      env:
+        QT_VERSION: 5
       run: qmake
     - name: make
+      env:
+        QT_VERSION: 5
       run: make
     
