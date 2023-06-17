@@ -34,7 +34,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ../Qt
-          key: ${{ runner.os }}-QtCache
+          key: ${{ runner.os }}-${{ matrix.arch == 'x64' && 'x64' || 'x86' }}-QtCache
       - name: Install Qt
         uses: jurplel/install-qt-action@v3
         with:
