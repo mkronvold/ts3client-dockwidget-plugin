@@ -18,7 +18,7 @@ jobs:
       max-parallel: 3
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           submodules: true
       - uses: ilammy/msvc-dev-cmd@v1
@@ -31,12 +31,12 @@ jobs:
           architecture: ${{ matrix.arch }}
       - name: Cache Qt
         id: cache-qt
-        uses: actions/cache@v1
+        uses: actions/cache@v3
         with:
           path: ../Qt
           key: ${{ runner.os }}-QtCache
       - name: Install Qt
-        uses: jurplel/install-qt-action@v2
+        uses: jurplel/install-qt-action@v3
         with:
           version: '5.15.2'
           host: 'windows'
@@ -49,7 +49,7 @@ jobs:
           tools: 'tools_ifw tools_qtcreator,qt.tools.qtcreator'
           aqtversion: '==2.0.0'
       - name: Setup cmake
-        uses: jwlawson/actions-setup-cmake@v1.12
+        uses: jwlawson/actions-setup-cmake@v1.14
       - name: Build
         run: |
           cmake -A ${{ matrix.arch == 'x64' && 'x64' || 'Win32' }} .
