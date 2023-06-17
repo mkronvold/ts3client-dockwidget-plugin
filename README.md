@@ -1,6 +1,9 @@
 # TeamSpeak 3 Client Dock Widgets Plugin
 
-[![Build Status](https://travis-ci.org/svenpaulsen/ts3client-dockwidget-plugin.svg?branch=master)](https://travis-ci.org/svenpaulsen/ts3client-dockwidget-plugin)
+*** Do not expect this to work...  ***
+
+
+
 
 This plugin allows you to re-arrange or detach elements of the TeamSpeak 3 Client UI to further customize your user experience.
 
