@@ -24,7 +24,7 @@ jobs:
       - uses: ilammy/msvc-dev-cmd@v1
         with:
           arch: ${{ matrix.arch }}
-          toolset: 14.0
+          vsversion: 2019
       - uses: actions/setup-python@v3
         with:
           python-version: '3.10'
@@ -41,7 +41,7 @@ jobs:
           version: '5.15.2'
           host: 'windows'
           target: 'desktop'
-          arch: ${{ matrix.arch == 'x64' && 'win64_msvc2017_64' || 'win32_msvc2017' }}
+          arch: ${{ matrix.arch == 'x64' && 'win64_msvc2019_64' || 'win32_msvc2019' }}
           dir: '${{ github.workspace }}'
           install-deps: 'true'
           cache: ${{ steps.cache-qt.outputs.cache-hit }}
