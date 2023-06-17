@@ -10,9 +10,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: update apt
-      run: apt-get update -qq
+      run: sudo apt-get update -qq
     - name: Install qt
-      run: apt-get -y install qtdeclarative5-dev qt5-default
+      run: sudo apt-get -y install qtdeclarative5-dev qt5-default
     - name: qmake
       env:
         QT_VERSION: 5
