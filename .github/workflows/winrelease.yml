@@ -44,7 +44,7 @@ jobs:
           arch: ${{ matrix.arch == 'x64' && 'win64_msvc2017_64' || 'win32_msvc2017' }}
           dir: '${{ github.workspace }}'
           install-deps: 'true'
-          cached: ${{ steps.cache-qt.outputs.cache-hit }}
+          cache: ${{ steps.cache-qt.outputs.cache-hit }}
           setup-python: 'false'
           tools: 'tools_ifw tools_qtcreator,qt.tools.qtcreator'
           aqtversion: '==2.0.0'
