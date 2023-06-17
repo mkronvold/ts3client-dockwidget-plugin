@@ -22,12 +22,12 @@ endif()
 include_directories("includes/pluginsdk/include")
 
 set(sources
-    src/plugin.cpp
-    src/widgethelper.cpp
-    src/shared.cpp
     src/plugin.h
-    src/widgethelper.h
+    src/plugin.cpp
     src/shared.h
+    src/shared.cpp
+    src/widgethelper.h
+    src/widgethelper.cpp
     src/singleton.h
 )
 
